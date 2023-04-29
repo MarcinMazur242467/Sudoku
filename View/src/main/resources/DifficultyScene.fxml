@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="537.0" prefWidth="638.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.SceneController">
+   <RadioButton fx:id="rb1" layoutX="243.0" layoutY="128.0" mnemonicParsing="false" onAction="#getDifficulty" prefHeight="18.0" prefWidth="330.0" text="%_Easy" AnchorPane.leftAnchor="243.0" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="128.0">
+      <toggleGroup>
+         <ToggleGroup fx:id="difficultyButton" />
+      </toggleGroup>
+   </RadioButton>
+   <RadioButton fx:id="rb2" layoutX="243.0" layoutY="155.0" mnemonicParsing="false" onAction="#getDifficulty" text="%_Medium" toggleGroup="$difficultyButton" />
+   <RadioButton fx:id="rb3" layoutX="243.0" layoutY="180.0" mnemonicParsing="false" onAction="#getDifficulty" text="%_Hard" toggleGroup="$difficultyButton" />
+   <Label layoutX="243.0" layoutY="94.0" prefHeight="17.0" prefWidth="151.0" text="%_Header">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+   <Button layoutX="243.0" layoutY="214.0" mnemonicParsing="false" onAction="#startGame" prefHeight="109.0" prefWidth="151.0" text="%_Start" />
+   <RadioButton fx:id="language_b2" layoutX="14.0" layoutY="506.0" mnemonicParsing="false" onAction="#changeLanguage" text="English">
+      <toggleGroup>
+         <ToggleGroup fx:id="language" />
+      </toggleGroup>
+   </RadioButton>
+   <RadioButton fx:id="language_b1" layoutX="14.0" layoutY="480.0" mnemonicParsing="false" onAction="#changeLanguage" text="Polski " toggleGroup="$language" />
+   <Button layoutX="551.0" layoutY="493.0" mnemonicParsing="false" onAction="#displayAuthors" text="%_Authors" />
+</AnchorPane>
